@@ -595,7 +595,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 408px;
+  width: 392px;
   height: 584px;
   background-color: #fcfcfc;
   padding: 72px 24px 24px;
@@ -910,7 +910,7 @@ img {
 .portfolio-desc {
   color: var(--main-text-color);
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 427px) {
   /* Hero */
   .hero-title {
     font-size: 26px;
@@ -923,6 +923,11 @@ img {
   /* Team */
   .secondary-title {
     font-size: 27px;
+  }
+  /* Modal */
+  .modal {
+    width: 300px;
+    height: 620px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -937,7 +942,6 @@ img {
   .nav-list {
     display: flex;
   }
-
   .contacts {
     display: flex;
   }
@@ -947,6 +951,10 @@ img {
       url('../images/background/backgroundwork@tablet.jpg');
     background-size: cover;
   }
+    /* Modal */
+    .modal {
+      width: 408px;
+    }
 }
 @media screen and (min-width: 1158px) {
   /* Header */
@@ -1078,4 +1086,8 @@ img {
     width: auto;
     padding: 0;
   }
+    /* Modal */
+    .modal {
+      width: 408px;
+    }
 }
