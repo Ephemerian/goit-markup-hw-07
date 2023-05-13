@@ -63,6 +63,7 @@ img {
 /* Components */
 
 .container {
+  max-width: 428px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -143,6 +144,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 428px;
 }
 
 .nav-container {
@@ -217,7 +219,15 @@ img {
   margin: 0 auto;
   padding: 112px 0;
 }
-
+@media screen and (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+  .hero-section {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url('../images/background/backgroundwork@mobile@2x.jpg');
+    background-size: cover;
+  }
+}
 .hero-title {
   font-weight: 700;
   font-size: 36px;
@@ -273,7 +283,8 @@ img {
 }
 
 .advantages-item-container {
-  /* width: calc((100% - var(--grid-gap) * 3) / 4); */
+  width: 396px;
+  margin: 0 auto;
 }
 
 .advantages-desc {
@@ -389,7 +400,7 @@ img {
 
 /* Customers */
 .customers-section {
-  padding: 96px 16px;
+  padding: 96px 0;
 }
 
 .customers-title {
@@ -928,6 +939,11 @@ img {
   .hero-section {
     background-size: cover;
   }
+  /* Section */
+  .advantages-item-container {
+    max-width: 320px;
+    width: auto;
+  }
   /* Team */
   .secondary-title {
     font-size: 27px;
@@ -940,7 +956,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 1157px;
+    max-width: 768px;
   }
   /* Header */
   .header-logo {
@@ -974,12 +990,36 @@ img {
       url('../images/background/backgroundwork@tablet.jpg');
     background-size: cover;
   }
+  @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      .hero-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+          url('../images/background/backgroundwork@tablet@2x.jpg');
+        background-size: cover;
+      }
+  }
   /* Advantages */
+  .advantages-container {
+    max-width: 750px;
+    padding: 0;
+  }
+  .sub-title {
+    text-align: left;
+  }
+  .advantages-item-container {
+    width: 356px;
+  }
   .advantages-list-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 24px;
   }
   /* Team */
+  .team-container {
+    max-width: 582px;
+  }
+  .employees-section {
+    padding: 96px 0;
+  }
   .employees-list {
     display: flex;
     flex-direction: row;
@@ -991,8 +1031,11 @@ img {
     row-gap: 72px;
   }
   /* Customers */
+  .customers-container {
+    max-width: 582px;
+  }
   .customers-item {
-    width: calc((100% - 25px) / 4);
+    width: calc((100% - 48px) / 3);
   }
   /* Footer */
   .footer-container {
@@ -1000,7 +1043,7 @@ img {
     flex-wrap: wrap;
     flex-direction: row;
     align-items: baseline;
-    width: 552px;
+    width: 582px;
     column-gap: 24px;
   }
   .footer-logo {
@@ -1058,7 +1101,15 @@ img {
     background-size: cover;
     padding: 188px 0;
   }
-
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      .hero-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+          url('../images/background/backgroundwork@2x.jpg');
+        background-size: cover;
+      }
+    }
   .hero-title {
     font-size: 56px;
     line-height: 60px;
@@ -1070,7 +1121,7 @@ img {
 
   /* Advantages */
   .advantages-section {
-    padding: 120px 0;
+    padding: 120px 15px;
   }
 
   .sub-title {
@@ -1176,12 +1227,12 @@ img {
     width: 408px;
   }
 }
-
 /*
   |============================
   | Mobile
   |============================
 */
+
 .menu-toggle {
   min-height: 24px;
   min-width: 24px;
@@ -1285,7 +1336,7 @@ img {
 
 .mobile-contacts-phone {
   font-size: 36px;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-weight: 700;
   font-style: normal;
   line-height: 40px;
@@ -1296,11 +1347,11 @@ img {
 }
 .mobile-contacts-mail {
   font-size: 20px;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-weight: 500;
   font-style: normal;
   line-height: 24px;
-  letter-spacing: .02em;
+  letter-spacing: 0.02em;
   text-decoration: none;
   text-transform: none;
   color: var(--main-text-color);
