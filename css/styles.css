@@ -211,7 +211,7 @@ img {
 
 .hero-section {
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url('../images/background/backgroundwork@mobile.jpg');
+    url('../images/background/backgroundwork@tablet.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -224,7 +224,7 @@ img {
 (min-resolution: 2dppx) {
   .hero-section {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      url('../images/background/backgroundwork@mobile@2x.jpg');
+      url('../images/background/backgroundwork@tablet@2x.jpg');
     background-size: cover;
   }
 }
@@ -412,7 +412,7 @@ img {
   align-items: center;
   justify-content: center;
   list-style: none;
-  gap: 24px;
+  gap: 72px 16px;
   padding-left: 0;
   flex-wrap: wrap;
 }
@@ -596,6 +596,7 @@ img {
 }
 
 .backdrop {
+  overflow: scroll;
   position: fixed;
   z-index: 100;
   top: 0;
@@ -611,9 +612,9 @@ img {
 
 .modal {
   position: absolute;
-  top: 50%;
+  top: 10%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   width: 392px;
   height: 584px;
   background-color: #fcfcfc;
@@ -939,6 +940,21 @@ img {
   .hero-section {
     background-size: cover;
   }
+    .hero-section {
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url('../images/background/backgroundwork@mobile.jpg');
+      background-size: cover;
+    }
+  
+    @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      .hero-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+          url('../images/background/backgroundwork@mobile@2x.jpg');
+        background-size: cover;
+      }
+    }
   /* Section */
   .advantages-item-container {
     max-width: 320px;
@@ -987,13 +1003,13 @@ img {
   /* Hero */
   .hero-section {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      url('../images/background/backgroundwork@tablet.jpg');
+      url('../images/background/backgroundwork.jpg');
     background-size: cover;
   }
   @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       .hero-section {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-          url('../images/background/backgroundwork@tablet@2x.jpg');
+          url('../images/background/backgroundwork@2x.jpg');
         background-size: cover;
       }
   }
@@ -1031,6 +1047,9 @@ img {
     row-gap: 72px;
   }
   /* Customers */
+  .customers-list {
+    column-gap: 24px;
+  }
   .customers-container {
     max-width: 582px;
   }
@@ -1095,21 +1114,9 @@ img {
   }
   /* Hero */
   .hero-section {
-    max-width: 1158px;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      url('../images/background/backgroundwork.jpg');
-    background-size: cover;
+    max-width: 1440px;
     padding: 188px 0;
   }
-  @media screen and (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-      .hero-section {
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-          url('../images/background/backgroundwork@2x.jpg');
-        background-size: cover;
-      }
-    }
   .hero-title {
     font-size: 56px;
     line-height: 60px;
@@ -1224,6 +1231,8 @@ img {
   }
   /* Modal */
   .modal {
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 408px;
   }
 }
@@ -1345,6 +1354,7 @@ img {
   text-decoration: none;
   color: var(--primary-brand-color);
 }
+
 .mobile-contacts-mail {
   font-size: 20px;
   font-family: 'Roboto';
